@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center><h1>Add books</h1></center>
+<center>
+<div style="border:1px solid red;background-color:pink;height:500px;padding:100px;width:600px;">
+        <form method="POST"  enctype="multipart/form-data">
+            {% csrf_token %}
+
+
+            <label>Title</label>
+        <input type="text" name="t" placeholder="enter the title"><br><br><br>
+
+            <label>Author</label>
+        <input type="text" name="a" placeholder="enter the author"><br><br><br>
+
+
+        <label>Price</label>
+        <input type="number" name="p" placeholder="enter the price"><br><br><br>
+
+            <label>Pdf</label>
+        <input type="file" name="f"><br><br><br>
+
+            <label>cover</label>
+        <input type="file" name="i"><br><br><br>
+
+
+
+        <input type="submit">
+
+</form>
+
+    </div>
+</center>
+{% endblock %}
